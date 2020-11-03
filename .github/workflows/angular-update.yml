@@ -12,7 +12,7 @@ jobs:
         with:
           ref: dev-angular-updates
       - name: Install dependencies
-        run: mkdir ./client/node_modules && cp package*json ./client && npm install --prefix ./client/node_modules
+        run: mkdir ./client/node_modules && cp package*json ./client && npm install --prefix ./client
       - name: Update Angular if necessary
         uses: tinesoft/ngx-uptodate@v1.1.0
         with:
