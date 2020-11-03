@@ -12,9 +12,7 @@ jobs:
         with:
           ref: dev-angular-updates
       - name: Install dependencies
-        run: npm ci
-      - name: Copy binaries
-        run: mkdir -p client/node_modules/@angular/cli/bin && cp -avr node_modules/@angular/cli/bin client/node_modules/@angular/cli
+        run: npm install --prefix ./client/node_modules
       - name: Update Angular if necessary
         uses: tinesoft/ngx-uptodate@v1.1.0
         with:
