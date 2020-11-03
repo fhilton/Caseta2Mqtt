@@ -1,8 +1,6 @@
 name: Angular Updates
 
-on:
-  schedule:
-    - cron: "* * * * *"
+on: push
 
 jobs:
   bump-version:
@@ -10,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Angular CLI
-        run: npm install -g @angular/cli
+        run: npm install @angular/cli
       - name: Checkout source code
         uses: actions/checkout@v2
         with:
