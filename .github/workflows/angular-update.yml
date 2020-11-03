@@ -12,12 +12,12 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
         with:
-          ref: main
+          ref: dev-angular-updates
       - name: Update Angular if necessary
         uses: tinesoft/ngx-uptodate@v1.1.0
         with:
           repo-token: ${{ secrets.BOT_TOKEN }}
-          base-branch: main
+          base-branch: dev-angular-updates
           project-path: client
           pr-title: "chore: update angular version"
           pr-reviewers: mark-j
