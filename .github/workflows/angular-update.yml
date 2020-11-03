@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Copy binaries
-        run: mkdir -p client/node_modules/@angular/cli/bin/ng && cp node_modules/@angular/cli/bin/ng client/node_modules/@angular/cli/bin/ng && cd client/node_modules/@angular/cli/bin/ng && ls
+        run: mkdir -p client/node_modules/@angular/cli/bin && cp -v node_modules/@angular/cli/bin client/node_modules/@angular/cli/bin
       - name: Update Angular if necessary
         uses: tinesoft/ngx-uptodate@v1.1.0
         with:
